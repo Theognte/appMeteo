@@ -45,7 +45,7 @@ input {
     border: 1px solid #eee;
 }
 
-input[type="submit"] {
+input[type="button"] #submit {
     width: 150px;
     height: 40px;
     background:#B9DFFF;
@@ -55,7 +55,7 @@ input[type="submit"] {
     text-shadow:none;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover #submit {
     background:#016ABC;
     color:#fff;
     border: 1px solid #eee;

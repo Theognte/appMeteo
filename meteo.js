@@ -21,6 +21,10 @@ function apiMeteoPart1() {
             document.getElementById("cityText").innerHTML=data.name;
             document.getElementById("tempText").innerHTML=data.main.temp+"°C";
             document.getElementById("descText").innerHTML=data.weather[0].description;
+            document.getElementById("pressText").innerHTML="--";
+            document.getElementById("humText").innerHTML="--";
+            document.getElementById("visText").innerHTML="--";
+            document.getElementById("windText").innerHTML="--";
         } else if (httpRequest == 400) {
             console.log('Error 400');
         } else {
@@ -50,7 +54,7 @@ function apiMeteoPart2() {
                 document.getElementById("pressText").innerHTML=data.main.pressure+"hPa";
                 document.getElementById("humText").innerHTML=data.main.humidity+"%";
                 document.getElementById("visText").innerHTML=data.visibility+"m";
-                document.getElementById("windText").innerHTML=data.wind.speed+"km/h";
+                document.getElementById("windText").innerHTML=data.wind.speed+"m/s";
 
             } else if (httpRequest == 400) {
                 console.log('Error 400');
@@ -60,7 +64,4 @@ function apiMeteoPart2() {
         }
 
     }
-    
 }
-
-
