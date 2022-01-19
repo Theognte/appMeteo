@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+        <title>Application : Météo</title>
+        <script src="meteo.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Accueil</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">Aide</a>
+                </li>
+            </ul>
+        </nav>
+
+        <form>
+            <input type="text" id="ville" name="ville" placeholder="Saisir votre ville" required>
+            <input type="submit" value="Valider" onclick="apiMeteoPart1()">
+        </form>
+
+        <div class="meteo">
+            <a id="titre">Prévision météorologique</a> <br> <br>
+            <a id="cityText">--</a> <br>
+            <a id="tempText">--°C </a> <br>
+            <a id="descText">--</a> <br>
+            <input type="button" name="details" value="Voir plus de détails" onclick="apiMeteoPart2()">
+            <div class="box">
+                <a id="titre">Vitesse du vent</a> <br> <br>
+                <a id="windText">--</a>
+            </div>
+            <div class="box">
+                <a id="titre">Humidité</a> <br> <br>
+                <a id="humText">--</a>
+            </div>            
+            <div class="box">
+                <a id="titre">Pression</a> <br> <br>
+                <a id="pressText">--</a>
+            </div>
+            <div class="box">
+                <a id="titre">Visibilité</a> <br> <br>
+                <a id="visText">--</a>
+            </div>
+        </div>
+
+        <footer>
+            <a>Application créée par Théo GENETTE.</a>
+        </footer>
+    </body>
+</html>
