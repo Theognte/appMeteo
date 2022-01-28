@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="app.css">
         <meta charset="utf-8"/>
         <title>Application : Météo</title>
-        <script src="meteo.js".js"></script>
+        <script src="meteo.js"></script>
+        <script src="app.js"></script>
+        <script src="js/materialize.min.js"></script>
     </head>
 
     <body>
@@ -17,64 +19,85 @@
             <nav>
                 <div class="nav-wrapper">
                 <a href="#" class="brand-logo">MétéoFrance</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right">
+                <a href="#" data-target="menu-responsive" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
                     <li><a href="#">Accueil</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Aide</a></li>
                 </ul>
-                <ul class="side-nav" id="mobile-demo">
+                <ul class="side-nav" id="menu-responsive">
                     <li><a href="#">Accueil</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Aide</a></li>
                 </ul>
                 </div>
             </nav>
+
             <div class="main">
+                <div class="row">
 
-                <div class="container1 center">
+                    <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+                    <!-- Grey navigation panel
 
-                    <div class="blockInput">
-                        <div class="title">
-                            Saisissez votre ville
-                        </div>
-                        <input type="text" id="ville" name="ville" placeholder="Saisissez votre ville" required ="apiMeteoPart1()">
-                        <input id="submit" type="button" value="Valider" onclick="apiMeteoPart1()">
-                        <input id="details" type="button" name="details" value="Voir plus de détails" onclick="apiMeteoPart2()">
-                    </div>
-                    <div class="blockRight">
-                        <div class="block1">
+                          This content will be:
+                      3-columns-wide on large screens,
+                      4-columns-wide on medium screens,
+                      12-columns-wide on small screens  -->
+
+                      <div class="blockInput">
                             <div class="title">
-                                Prévision météorologique
+                                Saisissez votre ville
                             </div>
-                            <a id="cityText">--</a> <br>
-                            <a id="tempText">-- °C</a> <br>
-                            <a id="descText">--</a> <br>
-    
-                            <a id="date"></a>
+                            <input type="text" id="ville" name="ville" placeholder="Saisissez votre ville" required ="apiMeteoPart1()">
+                            <input id="submit" type="button" value="Valider" onclick="apiMeteoPart1()">
+                            <input id="details" type="button" name="details" value="Voir plus de détails" onclick="apiMeteoPart2()">
                         </div>
-                        <div id="detailsBoxes" class="block2">
-                            <div class="box">
-                                <a id="titre">Vitesse du vent</a> <br> <br>
-                                <a id="windText">--</a>
-                            </div>
-                            <div class="box">
-                                <a id="titre">Humidité</a> <br> <br>
-                                <a id="humText">--</a>
-                            </div>
-                            <div class="box">
-                                <a id="titre">Pression</a> <br> <br>
-                                <a id="pressText">--</a>
-                            </div>
-                            <div class="box">
-                                <a id="titre">Visibilité</a> <br> <br>
-                                <a id="visText">--</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
+                    </div>
+
+                    <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+                    <!-- Teal page content
+
+                          This content will be:
+                      9-columns-wide on large screens,
+                      8-columns-wide on medium screens,
+                      12-columns-wide on small screens  -->
+                        <div class="container blockRight">
+                            <div class="container block1">
+                                <div class="title">
+                                    Prévision météorologique
+                                </div>
+                                <a id="cityText">--</a> <br>
+                                <a id="tempText">-- °C</a> <br>
+                                <a id="descText">--</a> <br>
+
+                                <a id="date">-</a>
+                            </div>
+
+                            <div id="detailsBoxes" class="row">
+                                <div class="box">
+                                        <a id="titre">Vitesse du vent</a> <br> <br>
+                                        <a id="windText">--</a>
+                                    </div>
+                                <div class="box">
+                                    <a id="titre">Humidité</a> <br> <br>
+                                    <a id="humText">--</a>
+                                </div>
+                                <div class="box">
+                                        <a id="titre">Pression</a> <br> <br>
+                                        <a id="pressText">--</a>
+                                    </div>
+                                <div class="box">
+                                    <a id="titre">Visibilité</a> <br> <br>
+                                    <a id="visText">--</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
             
             <footer class="page-footer">
                 <div class="footer-copyright">

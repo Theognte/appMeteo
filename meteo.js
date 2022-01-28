@@ -26,7 +26,7 @@ function apiMeteoPart1() {
             document.getElementById("humText").innerHTML="--";
             document.getElementById("visText").innerHTML="--";
             document.getElementById("windText").innerHTML="--";
-            document.getElementById("date").innerHTML=("Le "+('0'+date.getDate()).slice(-2)+"/"+('0'+(date.getMonth()+1)).slice(-2)+"/"+date.getFullYear());
+            document.getElementById("date").innerHTML=(('0'+date.getDate()).slice(-2)+"/"+('0'+(date.getMonth()+1)).slice(-2)+"/"+date.getFullYear());
             document.getElementById('details').style.visibility = 'visible';
         } else if (httpRequest == 400) {
             console.log('Error 400');
