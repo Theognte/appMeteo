@@ -15,6 +15,7 @@ function apiMeteoPart1() {
         if (httpRequest.status == 200) {
 
             var data = JSON.parse(httpRequest.response)
+            var date = new Date();
 
             console.log(data)
 
@@ -25,6 +26,8 @@ function apiMeteoPart1() {
             document.getElementById("humText").innerHTML="--";
             document.getElementById("visText").innerHTML="--";
             document.getElementById("windText").innerHTML="--";
+            document.getElementById("date").innerHTML=("Le "+('0'+date.getDate()).slice(-2)+"/"+('0'+(date.getMonth()+1)).slice(-2)+"/"+date.getFullYear());
+            document.getElementById('details').style.visibility = 'visible';
         } else if (httpRequest == 400) {
             console.log('Error 400');
         } else {
@@ -51,10 +54,12 @@ function apiMeteoPart2() {
 
                 console.log(data)
 
-                document.getElementById("pressText").innerHTML=data.main.pressure+"hPa";
-                document.getElementById("humText").innerHTML=data.main.humidity+"%";
-                document.getElementById("visText").innerHTML=data.visibility+"m";
-                document.getElementById("windText").innerHTML=data.wind.speed+"m/s";
+                document.getElementById('detailsBoxes').style.visibility = 'visible';
+                document.getElementById("pressText").innerHTML=data.main.pressure+" hPa";
+                document.getElementById("humText").innerHTML=data.main.humidity+" %";
+                document.getElementById("visText").innerHTML=data.visibility+" m";
+                document.getElementById("windText").innerHTML=data.wind.speed+" m/s";
+                document.getElementById('details').style.visibility = 'hidden';
 
             } else if (httpRequest == 400) {
                 console.log('Error 400');

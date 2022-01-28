@@ -56,7 +56,7 @@ input {
 }
 
 #submit:hover {
-    background:#016ABC;
+    background:#46a4e5;
     color:#fff;
     border: 1px solid #eee;
     border-radius:10px;
@@ -71,7 +71,8 @@ input {
     width: 100%;
     min-height: 500px;
     height: 100%;
-    background-color: transparent;
+    background-image: linear-gradient(#65bbf8a2, #ffffffbb), url("ciel.jpeg");;
+    background-position: center;
     text-align: center;
     padding: 20px 30px 20px 30px;
     border-radius:10px;
@@ -84,6 +85,8 @@ input {
     width: 150px;
     height: 40px;
     margin-top: 20px;
+    background: transparent;
+    border: 0;
     cursor: pointer;
 }
 
@@ -91,6 +94,7 @@ input {
     width: 150px;
     height: 40px;
     margin-top: 20px;
+    border: 0;
     cursor: pointer;
     box-shadow: 0 2px 5px #2c2f333f;
     transition: all 0.8s;
@@ -133,7 +137,7 @@ footer{
 }
 
 nav ul {
-    width: 200px;
+    width: 100%;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -141,8 +145,8 @@ nav ul {
 
 nav ul::after {
     content:"";
-    display:table;
-    clear:both;
+    display: table;
+    clear: both;
 }
 
 nav li {
@@ -152,11 +156,11 @@ nav li {
 }
 
 nav {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: transparent;
-    /*position: sticky;*/
-    top: 0px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    background-color: #46a4e5;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
@@ -165,11 +169,17 @@ nav a {
     color: black;
     border-bottom: 2px solid transparent;
     padding: 10px 1;
+    transition: all 0.5s;
 }
 
 nav a:hover {
-    color: #016ABC;
-    border-bottom: 1px solid #016ABC;
+    color: #46a4e5;
+    border-bottom: 1px solid #46a4e5;
+}
+
+nav a .fontNav {
+    color: black;
+
 }
 
 nav li {

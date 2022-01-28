@@ -1,0 +1,150 @@
+nav {
+    margin-bottom: 50px;
+}
+
+.nav-wrapper {
+    background-color: #46a2e3;
+}
+
+.brand-logo {
+    margin-left: 20px;
+}
+
+footer{
+    margin-top: 50px;
+}
+
+.page-footer {
+    width: 100%;
+    background-color: #46a2e3;
+    position:fixed;
+    bottom:0;
+    left:0;
+}
+
+#details {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#details:hover {
+    height: 40px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 2px 5px #2c2f333f;
+    transition: all 0.8s;
+}
+
+#submit {
+    width: 100%;
+    height: 40px;
+    background:#B9DFFF;
+    color:#fff;
+    border-radius: 0;
+    border: 0 solid #eee;
+    margin-top: 0;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+    box-shadow: none;
+}
+
+#submit:hover {
+    background:#46a2e3;
+    color:#fff;
+    border: 0 solid #eee;
+    border-radius: 0;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+    cursor: pointer;
+    transition: all 0.8s;
+    box-shadow: none;
+}
+
+.container1 {
+    width: 70%;
+    height: 60%;
+    background: #fff;
+    box-shadow: 0 2px 5px #2c2f333f;
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container1 .title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.container1 .title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background : #46a2e3;
+    
+}
+
+#cityText {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#tempText {
+    text-align: center;
+    font-size: 48px;
+}
+
+#descText {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.box {
+    width: 125px;
+    height: 125px;
+    background: #00000020;
+    border-radius: 2px;
+    padding: 10px 10px 10px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: black;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.block2 {
+    visibility: hidden;
+    display: inline-flex;
+}
+
+.blockRight {
+    background-image: linear-gradient(#65bbf8a2, #ffffffbb), url("ciel.jpeg");;
+    background-position: center;
+    padding: 20px 30px 20px 30px;
+    margin: -20px -30px -20px 0px;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+      

@@ -1,57 +1,89 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Import mon css-->
+        <link rel="stylesheet" href="app.css">
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="style.css">
         <title>Application : Météo</title>
-        <script src="meteo.js"></script>
+        <script src="meteo.js".js"></script>
     </head>
 
     <body>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Accueil</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <a href="#">Aide</a>
-                </li>
-            </ul>
-        </nav>
+        <main>
+            <nav>
+                <div class="nav-wrapper">
+                <a href="#" class="brand-logo">MétéoFrance</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Aide</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Aide</a></li>
+                </ul>
+                </div>
+            </nav>
+            <div class="main">
 
-        <form>
-            <input type="text" id="ville" name="ville" placeholder="Saisir votre ville" required>
-            <input id="submit" type="button" value="Valider" onclick="apiMeteoPart1()">
-        </form>
+                <div class="container1 center">
 
-        <div class="meteo">
-            <a id="titre">Prévision météorologique</a> <br> <br>
-            <a id="cityText">--</a> <br>
-            <a id="tempText">-- °C </a> <br>
-            <a id="descText">--</a> <br>
-            <input type="button" name="details" value="Voir plus de détails" onclick="apiMeteoPart2()">
-            <div class="box">
-                <a id="titre">Vitesse du vent</a> <br> <br>
-                <a id="windText">--</a>
+                    <div class="blockInput">
+                        <div class="title">
+                            Saisissez votre ville
+                        </div>
+                        <input type="text" id="ville" name="ville" placeholder="Saisissez votre ville" required ="apiMeteoPart1()">
+                        <input id="submit" type="button" value="Valider" onclick="apiMeteoPart1()">
+                        <input id="details" type="button" name="details" value="Voir plus de détails" onclick="apiMeteoPart2()">
+                    </div>
+                    <div class="blockRight">
+                        <div class="block1">
+                            <div class="title">
+                                Prévision météorologique
+                            </div>
+                            <a id="cityText">--</a> <br>
+                            <a id="tempText">-- °C</a> <br>
+                            <a id="descText">--</a> <br>
+    
+                            <a id="date"></a>
+                        </div>
+                        <div id="detailsBoxes" class="block2">
+                            <div class="box">
+                                <a id="titre">Vitesse du vent</a> <br> <br>
+                                <a id="windText">--</a>
+                            </div>
+                            <div class="box">
+                                <a id="titre">Humidité</a> <br> <br>
+                                <a id="humText">--</a>
+                            </div>
+                            <div class="box">
+                                <a id="titre">Pression</a> <br> <br>
+                                <a id="pressText">--</a>
+                            </div>
+                            <div class="box">
+                                <a id="titre">Visibilité</a> <br> <br>
+                                <a id="visText">--</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="box">
-                <a id="titre">Humidité</a> <br> <br>
-                <a id="humText">--</a>
-            </div>            
-            <div class="box">
-                <a id="titre">Pression</a> <br> <br>
-                <a id="pressText">--</a>
-            </div>
-            <div class="box">
-                <a id="titre">Visibilité</a> <br> <br>
-                <a id="visText">--</a>
-            </div>
-        </div>
-        <footer>
-            <a>Application créée par Théo GENETTE.</a>
-        </footer>
+            
+            <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="container">
+                    © 2021 Copyright
+                    <a class="grey-text text-lighten-4 right" href="#!">Théo GENETTE</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
     </body>
 </html>
